@@ -1,9 +1,20 @@
+---
+---
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>conido株式会社</title>
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+<meta property="og:title" content="conido株式会社"/>
+<meta property="og:description" content="人口変動に左右されない、持続可能なインフラを。"/>
+<meta property="og:image" content="/images/ogp.png"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
 
 <style>
 *{
@@ -64,11 +75,9 @@ nav a{
   font-size:15px;
 }
 
-/* ボタン統一 */
 .contact,
 .button,
-.footer-button,
-.product-link{
+.footer-button{
   display:inline-block;
   padding:14px 24px;
   background:#0f766e;
@@ -86,12 +95,11 @@ nav a{
   padding:180px 72px 140px;
   background:
     linear-gradient(rgba(255,255,255,.55), rgba(255,255,255,.62)),
-    url("https://images.unsplash.com/photo-1506744038136-46273834b3fb");
+    url("/images/membrane.jpeg");
   background-size:cover;
   background-position:center;
 }
 
-/* ===== LAYOUT ===== */
 .container{
   max-width:1400px;
   margin:auto;
@@ -121,6 +129,7 @@ h1{
 .label{
   color:#0f766e;
   font-weight:700;
+  margin-bottom:12px;
 }
 
 h2{
@@ -158,6 +167,11 @@ h2{
   padding:44px;
 }
 
+.card-body ul{
+  padding-left:20px;
+  line-height:2;
+}
+
 /* ===== COMPANY ===== */
 .company{
   background:#f8fbfb;
@@ -173,14 +187,14 @@ h2{
 }
 
 .company-name{
-  font-size:clamp(24px,4vw,36px); /* 修正: スマホで大きすぎないよう clamp */
+  font-size:clamp(24px,4vw,36px);
   font-weight:900;
   margin-bottom:24px;
 }
 
 .company-text{
   line-height:2.2;
-  font-size:clamp(15px,2vw,18px); /* 修正: clamp でスマホ対応 */
+  font-size:clamp(15px,2vw,18px);
 }
 
 /* ===== FOOTER ===== */
@@ -189,7 +203,6 @@ footer{
   text-align:center;
 }
 
-/* ===== GLOBAL IMG FIX ===== */
 img{
   max-width:100%;
   height:auto;
@@ -199,7 +212,6 @@ img{
 /* ===== MOBILE ===== */
 @media(max-width:900px){
 
-  /* ★ヘッダー: 横並び維持 */
   .nav{
     padding:14px 20px;
     flex-direction:row;
@@ -220,8 +232,7 @@ img{
     font-size:13px;
   }
 
-  .contact,
-  .product-link{
+  .contact{
     padding:10px 14px;
     font-size:13px;
     border-radius:10px;
@@ -241,18 +252,13 @@ img{
   }
 
   .card img{
-    height:240px;
+    height:260px;
   }
 
-  /* ★会社概要: スマホで崩れない */
   .company-box{
-    padding:32px 24px; /* 修正: 左右paddingを確保 */
+    padding:32px 24px;
     max-width:100%;
     border-radius:20px;
-  }
-
-  .container{
-    padding:0; /* containerのpaddingはsectionのpadding側で管理 */
   }
 
   footer{
@@ -260,9 +266,8 @@ img{
   }
 }
 
-/* ===== 極小画面: テキストリンクを隠す ===== */
 @media(max-width:480px){
-  nav a:not(.contact):not(.product-link){
+  nav a:not(.contact){
     display:none;
   }
 }
@@ -275,10 +280,12 @@ img{
   <div class="nav">
     <div class="logo">conido</div>
     <nav>
-      <a href="#service">Service</a>
-      <a href="#company">Company</a>
-      <a href="#contact" class="contact">Contact</a>
-      <a href="/products" class="product-link">Products</a>
+      <a href="#company">会社概要</a>
+      <a href="/vision">私たちの想い</a>
+      <a href="/products/jokaso-dx">プロダクト</a>
+      <a href="/news">ニュース</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfCwxhrTMIHNpyX9h5-PlJ1SnbsK03lYNtL2lojUg3hFGoSkg/viewform?usp=header"
+         class="contact" target="_blank">お問い合わせ</a>
     </nav>
   </div>
 </header>
@@ -286,36 +293,42 @@ img{
 <section class="hero">
   <div class="container">
     <h1>
-      人とインフラを<br>
-      静かにつなぐ
+      人口変動に左右されない、<br>
+      持続可能なインフラを。
     </h1>
     <p>
-      小規模分散型インフラの設計・開発・運用を通じて、
-      持続可能な地域社会を実現します。
+      人口変動に依存しない地域基盤の実現を目指し、<br>
+      conido株式会社は分散型インフラに取り組みます。
     </p>
-    <a href="#service" class="button">View Service</a>
+    <a href="/vision" class="button" style="margin-top:48px;">私たちの想い</a>
   </div>
 </section>
 
 <section id="service" class="section">
   <div class="container">
-    <div class="label">Service</div>
+    <div class="label">Business</div>
     <h2>事業内容</h2>
 
     <div class="cards">
-      <a href="#" class="card">
-        <img src="https://images.unsplash.com/photo-1581090700227-1e8e7f1a6f5a" />
+      <a href="/products/jokaso-dx" class="card">
+        <img src="/images/sensor.png" alt="浄化槽管理DX" />
         <div class="card-body">
-          <h3>インフラ設計</h3>
-          <p>小規模施設向けの設計・最適化</p>
+          <h3>浄化槽管理DX</h3>
+          <ul>
+            <li>浄化槽管理士資格を保有</li>
+            <li>浄化槽管理Webアプリを開発</li>
+          </ul>
         </div>
       </a>
 
-      <a href="#" class="card">
-        <img src="https://images.unsplash.com/photo-1581092334497-3f6c6c2d5a6c" />
+      <a href="/products/jokaso-dx" class="card">
+        <img src="/images/membrane.jpeg" alt="分散型インフラ研究" />
         <div class="card-body">
-          <h3>運用支援</h3>
-          <p>現場オペレーションの効率化</p>
+          <h3>分散型インフラ研究</h3>
+          <ul>
+            <li>浄化槽による分散化のゾーニング提案</li>
+            <li>将来的な膜処理の検討</li>
+          </ul>
         </div>
       </a>
     </div>
@@ -324,18 +337,22 @@ img{
 
 <section id="company" class="section company">
   <div class="container">
+    <div class="label">Company</div>
+    <h2>会社概要</h2>
     <div class="company-box">
       <div class="company-name">conido株式会社</div>
       <div class="company-text">
-        インフラの再設計を通じて、地域の持続可能性を高めることを目的としています。
-        小さな単位で機能する仕組みを重視し、現場に寄り添った技術開発を行います。
+        代表取締役 石井ゆめみ<br><br>
+        〒010-0041<br>
+        秋田県秋田市広面字赤沼20-6
       </div>
     </div>
   </div>
 </section>
 
-<footer id="contact">
-  <a href="mailto:info@conido.jp" class="footer-button">Contact Us</a>
+<footer>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfCwxhrTMIHNpyX9h5-PlJ1SnbsK03lYNtL2lojUg3hFGoSkg/viewform?usp=header"
+     class="footer-button" target="_blank">お問い合わせはこちら</a>
 </footer>
 
 </body>

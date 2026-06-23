@@ -3,12 +3,11 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>conido株式会社</title>
 
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" type="image/png" href="/icons/favicon.png"/>
 
 <meta property="og:title" content="conido株式会社"/>
 <meta property="og:description" content="人口変動に左右されない、持続可能なインフラを。"/>
@@ -71,17 +70,13 @@ nav{
 }
 
 nav a{
-  color:#111;
-  font-size:15px;
+  text-decoration:none;
 }
 
-.contact,
-.button,
-.footer-button{
-  display:inline-block;
+.contact{
   padding:14px 24px;
   background:#0f766e;
-  color:#fff !important;
+  color:white !important;
   border-radius:14px;
   font-weight:700;
   white-space:nowrap;
@@ -95,7 +90,7 @@ nav a{
   padding:180px 72px 140px;
   background:
     linear-gradient(rgba(255,255,255,.55), rgba(255,255,255,.62)),
-    url("/images/membrane.jpeg");
+    url("https://images.unsplash.com/photo-1506744038136-46273834b3fb");
   background-size:cover;
   background-position:center;
 }
@@ -115,10 +110,30 @@ h1{
   word-break:keep-all;
 }
 
+.hero-title{
+  display:inline-block;
+}
+
+.hero-title span{
+  display:block;
+  white-space:nowrap;
+}
+
 .hero p{
   font-size:clamp(19px,2vw,24px);
   line-height:1.9;
   max-width:38em;
+}
+
+.button{
+  display:inline-block;
+  margin-top:44px;
+  padding:18px 34px;
+  background:#0f766e;
+  color:white !important;
+  text-decoration:none;
+  border-radius:18px;
+  font-weight:700;
 }
 
 /* ===== SECTIONS ===== */
@@ -129,7 +144,6 @@ h1{
 .label{
   color:#0f766e;
   font-weight:700;
-  margin-bottom:12px;
 }
 
 h2{
@@ -145,11 +159,12 @@ h2{
 
 .card{
   display:block;
+  text-decoration:none;
+  color:inherit;
   background:white;
   border-radius:28px;
   overflow:hidden;
   box-shadow:0 24px 80px rgba(0,0,0,.08);
-  transition:0.3s;
 }
 
 .card:hover{
@@ -167,8 +182,7 @@ h2{
   padding:44px;
 }
 
-.card-body ul{
-  padding-left:20px;
+.card ul{
   line-height:2;
 }
 
@@ -182,7 +196,6 @@ h2{
   padding:64px;
   border-radius:32px;
   max-width:760px;
-  width:100%;
   box-shadow:0 24px 80px rgba(0,0,0,.08);
 }
 
@@ -201,6 +214,16 @@ h2{
 footer{
   padding:140px 40px;
   text-align:center;
+}
+
+.footer-button{
+  display:inline-block;
+  padding:22px 48px;
+  background:#0f766e;
+  color:white !important;
+  border-radius:20px;
+  text-decoration:none;
+  font-weight:700;
 }
 
 img{
@@ -228,10 +251,6 @@ img{
     justify-content:flex-end;
   }
 
-  nav a{
-    font-size:13px;
-  }
-
   .contact{
     padding:10px 14px;
     font-size:13px;
@@ -241,6 +260,10 @@ img{
   .hero{
     padding:120px 20px 80px;
     min-height:auto;
+  }
+
+  .hero-title span{
+    white-space:normal;
   }
 
   .section{
@@ -280,38 +303,38 @@ img{
   <div class="nav">
     <div class="logo">conido</div>
     <nav>
-      <a href="#company">会社概要</a>
+      <a href="/">会社概要</a>
       <a href="/vision">私たちの想い</a>
       <a href="/products/jokaso-dx">プロダクト</a>
       <a href="/news">ニュース</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfCwxhrTMIHNpyX9h5-PlJ1SnbsK03lYNtL2lojUg3hFGoSkg/viewform?usp=header"
-         class="contact" target="_blank">お問い合わせ</a>
+      <a class="contact"
+         href="https://docs.google.com/forms/d/e/1FAIpQLSfCwxhrTMIHNpyX9h5-PlJ1SnbsK03lYNtL2lojUg3hFGoSkg/viewform?usp=header"
+         target="_blank">お問い合わせ</a>
     </nav>
   </div>
 </header>
 
 <section class="hero">
   <div class="container">
-    <h1>
-      人口変動に左右されない、<br>
-      持続可能なインフラを。
+    <h1 class="hero-title">
+      <span>人口変動に左右されない、</span>
+      <span>持続可能なインフラを。</span>
     </h1>
     <p>
       人口変動に依存しない地域基盤の実現を目指し、<br>
       conido株式会社は分散型インフラに取り組みます。
     </p>
-    <a href="/vision" class="button" style="margin-top:48px;">私たちの想い</a>
+    <a class="button" href="/vision">私たちの想い</a>
   </div>
 </section>
 
-<section id="service" class="section">
+<section class="section">
   <div class="container">
     <div class="label">Business</div>
     <h2>事業内容</h2>
-
     <div class="cards">
-      <a href="/products/jokaso-dx" class="card">
-        <img src="/images/sensor.png" alt="浄化槽管理DX" />
+      <a class="card" href="/products/jokaso-dx">
+        <img src="/images/sensor.png" alt="浄化槽管理DX"/>
         <div class="card-body">
           <h3>浄化槽管理DX</h3>
           <ul>
@@ -320,9 +343,8 @@ img{
           </ul>
         </div>
       </a>
-
-      <a href="/products/jokaso-dx" class="card">
-        <img src="/images/membrane.jpeg" alt="分散型インフラ研究" />
+      <a class="card" href="/products/jokaso-dx">
+        <img src="/images/membrane.jpeg" alt="分散型インフラ研究"/>
         <div class="card-body">
           <h3>分散型インフラ研究</h3>
           <ul>
@@ -351,8 +373,9 @@ img{
 </section>
 
 <footer>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfCwxhrTMIHNpyX9h5-PlJ1SnbsK03lYNtL2lojUg3hFGoSkg/viewform?usp=header"
-     class="footer-button" target="_blank">お問い合わせはこちら</a>
+  <a class="footer-button"
+     href="https://docs.google.com/forms/d/e/1FAIpQLSfCwxhrTMIHNpyX9h5-PlJ1SnbsK03lYNtL2lojUg3hFGoSkg/viewform?usp=header"
+     target="_blank">お問い合わせはこちら</a>
 </footer>
 
 </body>

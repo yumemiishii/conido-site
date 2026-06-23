@@ -260,17 +260,22 @@ img{
   .hero{
     padding:120px 20px 80px;
     min-height:auto;
-    background-attachment:scroll; /* iOSでのfixed背景バグ対策 */
-    width:100%;
+    background-attachment:scroll;
   }
 
   .hero-title span{
-    white-space:normal; /* 折り返しを許可 */
+    white-space:normal;
   }
 
   h1{
-    font-size:clamp(32px,9vw,52px); /* スマホでは小さく */
+    font-size:clamp(32px,9vw,52px);
     letter-spacing:-0.02em;
+  }
+
+  /* ★修正: スマホでは文字を小さくして改行位置を維持 */
+  .hero p{
+    font-size:15px;
+    line-height:1.8;
   }
 
   .section{
@@ -285,7 +290,6 @@ img{
     height:260px;
   }
 
-  /* 会社概要ボックス: 幅いっぱいに */
   .company-box{
     padding:32px 24px;
     max-width:100%;
@@ -298,7 +302,6 @@ img{
     padding:80px 20px;
   }
 
-  /* フッターボタンも幅に収める */
   .footer-button{
     padding:18px 32px;
   }

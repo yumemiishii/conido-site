@@ -1,730 +1,342 @@
----
-
----
-
+<!DOCTYPE html>
 <html lang="ja">
-
 <head>
-
-<meta charset="UTF-8"/>
-
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1"
-/>
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>conido株式会社</title>
 
-<link
-rel="icon"
-type="image/png"
-href="/icons/favicon.png"
-/>
-
-<meta
-property="og:title"
-content="conido株式会社"
-/>
-
-<meta
-property="og:description"
-content="人口変動に左右されない、持続可能なインフラを。"
-/>
-
-<meta
-property="og:image"
-content="/images/ogp.png"
-/>
-
-<meta
-property="og:type"
-content="website"
-/>
-
-<meta
-name="twitter:card"
-content="summary_large_image"
-/>
-
 <style>
-
 *{
-box-sizing:border-box;
+  box-sizing:border-box;
 }
 
 html{
-
-scroll-behavior:
-smooth;
-
+  scroll-behavior:smooth;
 }
 
 body{
-margin:0;
-font-family:-apple-system,BlinkMacSystemFont,sans-serif;
-color:#111;
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+  color:#111;
+  overflow-x:hidden;
 }
 
 a{
-color:inherit;
+  color:inherit;
+  text-decoration:none;
 }
 
+/* ===== HEADER ===== */
 header{
-
-position:fixed;
-
-top:0;
-
-width:100%;
-
-background:
-rgba(255,255,255,.92);
-
-backdrop-filter:
-blur(16px);
-
-z-index:100;
-
-border-bottom:
-1px solid rgba(0,0,0,.05);
-
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(16px);
+  z-index:100;
+  border-bottom:1px solid rgba(0,0,0,.05);
 }
 
 .nav{
-
-max-width:1400px;
-
-margin:auto;
-
-padding:28px 72px;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
+  max-width:1400px;
+  margin:auto;
+  padding:20px 72px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 .logo{
-
-text-decoration:none;
-
-color:#111;
-
-font-size:42px;
-
-font-weight:900;
-
-letter-spacing:-0.04em;
-
+  font-size:28px;
+  font-weight:900;
+  letter-spacing:-0.04em;
+  flex-shrink:0;
 }
 
 nav{
-
-display:flex;
-
-gap:44px;
-
-align-items:center;
-
+  display:flex;
+  gap:44px;
+  align-items:center;
 }
 
 nav a{
-
-text-decoration:none;
-
+  color:#111;
+  font-size:15px;
 }
 
-.contact{
-
-padding:14px 24px;
-
-background:#0f766e;
-
-color:white;
-
-border-radius:14px;
-
-font-weight:700;
-
+/* ボタン統一 */
+.contact,
+.button,
+.footer-button,
+.product-link{
+  display:inline-block;
+  padding:14px 24px;
+  background:#0f766e;
+  color:#fff !important;
+  border-radius:14px;
+  font-weight:700;
+  white-space:nowrap;
 }
 
+/* ===== HERO ===== */
 .hero{
-
-min-height:100vh;
-
-display:flex;
-
-align-items:center;
-
-padding:180px 72px 140px;
-
-background:
-
-linear-gradient(
-rgba(255,255,255,.55),
-rgba(255,255,255,.62)
-),
-
-url(
-"https://images.unsplash.com/photo-1506744038136-46273834b3fb"
-);
-
-background-size:cover;
-
-background-position:center;
-
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding:180px 72px 140px;
+  background:
+    linear-gradient(rgba(255,255,255,.55), rgba(255,255,255,.62)),
+    url("https://images.unsplash.com/photo-1506744038136-46273834b3fb");
+  background-size:cover;
+  background-position:center;
 }
 
+/* ===== LAYOUT ===== */
 .container{
-
-max-width:1400px;
-
-margin:auto;
-
-width:100%;
-
+  max-width:1400px;
+  margin:auto;
+  width:100%;
 }
 
 h1{
-
-font-size:
-
-clamp(
-52px,
-6vw,
-80px
-);
-
-line-height:1.12;
-
-letter-spacing:-0.04em;
-
-margin-bottom:32px;
-
-font-weight:800;
-
-word-break:keep-all;
-
-}
-
-.hero-title{
-
-display:inline-block;
-
-}
-
-.hero-title span{
-
-display:block;
-
-white-space:nowrap;
-
+  font-size:clamp(52px,6vw,80px);
+  line-height:1.12;
+  letter-spacing:-0.04em;
+  margin-bottom:32px;
+  font-weight:800;
+  word-break:keep-all;
 }
 
 .hero p{
-
-font-size:
-
-clamp(
-19px,
-2vw,
-24px
-);
-
-line-height:1.9;
-
-max-width:38em;
-
+  font-size:clamp(19px,2vw,24px);
+  line-height:1.9;
+  max-width:38em;
 }
 
-.button{
-
-display:inline-block;
-
-margin-top:44px;
-
-padding:18px 34px;
-
-background:#0f766e;
-
-color:white;
-
-text-decoration:none;
-
-border-radius:18px;
-
-font-weight:700;
-
-}
-
+/* ===== SECTIONS ===== */
 .section{
-
-padding:180px 72px;
-
+  padding:180px 72px;
 }
 
 .label{
-
-color:#0f766e;
-
-font-weight:700;
-
+  color:#0f766e;
+  font-weight:700;
 }
 
 h2{
-
-font-size:
-
-clamp(
-40px,
-5vw,
-60px
-);
-
-margin-bottom:56px;
-
+  font-size:clamp(40px,5vw,60px);
+  margin-bottom:56px;
 }
 
 .cards{
-
-display:grid;
-
-grid-template-columns:
-1fr 1fr;
-
-gap:56px;
-
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:56px;
 }
 
 .card{
-
-display:block;
-
-text-decoration:none;
-
-color:inherit;
-
-background:white;
-
-border-radius:28px;
-
-overflow:hidden;
-
-box-shadow:
-0 24px 80px rgba(0,0,0,.08);
-
+  display:block;
+  background:white;
+  border-radius:28px;
+  overflow:hidden;
+  box-shadow:0 24px 80px rgba(0,0,0,.08);
+  transition:0.3s;
 }
 
 .card:hover{
-
-transform:
-translateY(-6px);
-
+  transform:translateY(-6px);
 }
 
 .card img{
-
-width:100%;
-
-height:360px;
-
-object-fit:cover;
-
-display:block;
-
+  width:100%;
+  height:360px;
+  object-fit:cover;
+  display:block;
 }
 
 .card-body{
-
-padding:44px;
-
+  padding:44px;
 }
 
-.card ul{
-
-line-height:2;
-
-}
-
+/* ===== COMPANY ===== */
 .company{
-
-background:#f8fbfb;
-
+  background:#f8fbfb;
 }
 
 .company-box{
-
-background:white;
-
-padding:64px;
-
-border-radius:32px;
-
-max-width:760px;
-
-box-shadow:
-0 24px 80px rgba(0,0,0,.08);
-
+  background:white;
+  padding:64px;
+  border-radius:32px;
+  max-width:760px;
+  width:100%;
+  box-shadow:0 24px 80px rgba(0,0,0,.08);
 }
 
 .company-name{
-
-font-size:36px;
-
-font-weight:900;
-
-margin-bottom:24px;
-
+  font-size:clamp(24px,4vw,36px); /* 修正: スマホで大きすぎないよう clamp */
+  font-weight:900;
+  margin-bottom:24px;
 }
 
 .company-text{
-
-line-height:2.2;
-
-font-size:18px;
-
+  line-height:2.2;
+  font-size:clamp(15px,2vw,18px); /* 修正: clamp でスマホ対応 */
 }
 
+/* ===== FOOTER ===== */
 footer{
-
-padding:140px 40px;
-
-text-align:center;
-
+  padding:140px 40px;
+  text-align:center;
 }
 
-.footer-button{
-
-display:inline-block;
-
-padding:22px 48px;
-
-background:#0f766e;
-
-color:white;
-
-border-radius:20px;
-
-text-decoration:none;
-
-font-weight:700;
-
+/* ===== GLOBAL IMG FIX ===== */
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
 }
 
+/* ===== MOBILE ===== */
 @media(max-width:900px){
 
-.nav{
+  /* ★ヘッダー: 横並び維持 */
+  .nav{
+    padding:14px 20px;
+    flex-direction:row;
+    gap:0;
+  }
 
-padding:20px;
+  .logo{
+    font-size:22px;
+  }
 
-flex-direction:column;
+  nav{
+    gap:14px;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+  }
 
-gap:20px;
+  nav a{
+    font-size:13px;
+  }
 
+  .contact,
+  .product-link{
+    padding:10px 14px;
+    font-size:13px;
+    border-radius:10px;
+  }
+
+  .hero{
+    padding:120px 20px 80px;
+    min-height:auto;
+  }
+
+  .section{
+    padding:100px 20px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .card img{
+    height:240px;
+  }
+
+  /* ★会社概要: スマホで崩れない */
+  .company-box{
+    padding:32px 24px; /* 修正: 左右paddingを確保 */
+    max-width:100%;
+    border-radius:20px;
+  }
+
+  .container{
+    padding:0; /* containerのpaddingはsectionのpadding側で管理 */
+  }
+
+  footer{
+    padding:80px 20px;
+  }
 }
 
-nav{
-
-gap:20px;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
+/* ===== 極小画面: テキストリンクを隠す ===== */
+@media(max-width:480px){
+  nav a:not(.contact):not(.product-link){
+    display:none;
+  }
 }
-
-.hero{
-
-padding:160px 28px 90px;
-
-}
-
-.section{
-
-padding:120px 28px;
-
-}
-
-.cards{
-
-grid-template-columns:1fr;
-
-}
-
-.card img{
-
-height:280px;
-
-}
-
-.company-box{
-
-padding:40px;
-
-}
-
-.hero-title span{
-
-white-space:normal;
-
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
 
 <header>
-
-<div class="nav">
-
-<div class="logo">
-
-conido
-
-</div>
-
-<nav>
-
-<a href="#company">
-
-会社概要
-
-</a>
-
-
-<a href="/vision">
-
-私たちの想い
-
-</a>
-
-<a href="/products/jokaso-dx">
-
-プロダクト
-
-</a>
-
-<a href="/news">
-
-ニュース
-
-</a>
-
-
-<a
-class="contact"
-
-href="https://docs.google.com/forms/d/e/1FAIpQLSfCwxhrTMIHNpyX9h5-PlJ1SnbsK03lYNtL2lojUg3hFGoSkg/viewform?usp=header"
-
-target="_blank"
->
-
-お問い合わせ
-
-</a>
-
-</nav>
-
-</div>
-
+  <div class="nav">
+    <div class="logo">conido</div>
+    <nav>
+      <a href="#service">Service</a>
+      <a href="#company">Company</a>
+      <a href="#contact" class="contact">Contact</a>
+      <a href="/products" class="product-link">Products</a>
+    </nav>
+  </div>
 </header>
 
 <section class="hero">
-
-<div class="container">
-
-<h1 class="hero-title">
-
-<span>
-
-人口変動に左右されない、
-
-</span>
-
-<span>
-
-持続可能なインフラを。
-
-</span>
-
-</h1>
-
-<p>
-
-人口変動に依存しない地域基盤の実現を目指し、<br>
-
-conido株式会社は分散型インフラに取り組みます。
-
-</p>
-
-<a
-class="button"
-
-href="/vision"
->
-
-私たちの想い
-
-</a>
-
-</div>
-
+  <div class="container">
+    <h1>
+      人とインフラを<br>
+      静かにつなぐ
+    </h1>
+    <p>
+      小規模分散型インフラの設計・開発・運用を通じて、
+      持続可能な地域社会を実現します。
+    </p>
+    <a href="#service" class="button">View Service</a>
+  </div>
 </section>
 
-<section class="section">
+<section id="service" class="section">
+  <div class="container">
+    <div class="label">Service</div>
+    <h2>事業内容</h2>
 
-<div class="container">
+    <div class="cards">
+      <a href="#" class="card">
+        <img src="https://images.unsplash.com/photo-1581090700227-1e8e7f1a6f5a" />
+        <div class="card-body">
+          <h3>インフラ設計</h3>
+          <p>小規模施設向けの設計・最適化</p>
+        </div>
+      </a>
 
-<div class="label">
-
-Business
-
-</div>
-
-<h2>
-
-事業内容
-
-</h2>
-
-<div class="cards">
-
-<a
-class="card"
-
-href="/products/jokaso-dx"
->
-
-<img
-src="/images/sensor.png"
-/>
-
-<div class="card-body">
-
-<h3>
-
-浄化槽管理DX
-
-</h3>
-
-<ul>
-
-<li>浄化槽管理士資格を保有</li>
-
-<li>浄化槽管理Webアプリを開発</li>
-
-</ul>
-
-</div>
-
-</a>
-
-<a
-class="card"
-
-href="/products/jokaso-dx"
->
-
-<img
-src="/images/membrane.jpeg"
-/>
-
-<div class="card-body">
-
-<h3>
-
-分散型インフラ研究
-
-</h3>
-
-<ul>
-
-<li>浄化槽による分散化のゾーニング提案</li>
-
-<li>将来的な膜処理の検討</li>
-
-</ul>
-
-</div>
-
-</a>
-
-</div>
-
-</div>
-
+      <a href="#" class="card">
+        <img src="https://images.unsplash.com/photo-1581092334497-3f6c6c2d5a6c" />
+        <div class="card-body">
+          <h3>運用支援</h3>
+          <p>現場オペレーションの効率化</p>
+        </div>
+      </a>
+    </div>
+  </div>
 </section>
 
-<section
-id="company"
-class="section company"
->
-
-
-<div class="container">
-
-<div class="label">
-
-Company
-
-</div>
-
-<h2>
-
-会社概要
-
-</h2>
-
-<div class="company-box">
-
-<div class="company-name">
-
-conido株式会社
-
-</div>
-
-<div class="company-text">
-
-代表取締役 石井ゆめみ
-
-<br><br>
-
-〒010-0041
-
-<br>
-
-秋田県秋田市広面字赤沼20-6
-
-</div>
-
-</div>
-
-</div>
-
+<section id="company" class="section company">
+  <div class="container">
+    <div class="company-box">
+      <div class="company-name">conido株式会社</div>
+      <div class="company-text">
+        インフラの再設計を通じて、地域の持続可能性を高めることを目的としています。
+        小さな単位で機能する仕組みを重視し、現場に寄り添った技術開発を行います。
+      </div>
+    </div>
+  </div>
 </section>
 
-<footer>
-
-<a
-class="footer-button"
-
-href="https://docs.google.com/forms/d/e/1FAIpQLSfCwxhrTMIHNpyX9h5-PlJ1SnbsK03lYNtL2lojUg3hFGoSkg/viewform?usp=header"
-
-target="_blank"
->
-
-お問い合わせはこちら
-
-</a>
-
+<footer id="contact">
+  <a href="mailto:info@conido.jp" class="footer-button">Contact Us</a>
 </footer>
 
 </body>
-
 </html>

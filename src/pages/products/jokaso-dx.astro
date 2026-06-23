@@ -1,479 +1,312 @@
----
-
----
-
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
-
 <meta charset="UTF-8"/>
-
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
 <title>浄化槽管理DX | conido株式会社</title>
-<link
-rel="icon"
-type="image/png"
-href="/icons/favicon.png"
-/>
 
-<meta
-property="og:title"
-content="conido株式会社"
-/>
+<link rel="icon" type="image/png" href="/icons/favicon.png"/>
 
-<meta
-property="og:description"
-content="人口変動に左右されない、持続可能なインフラを。"
-/>
-
-<meta
-property="og:image"
-content="/images/ogp.png"
-/>
-
-<meta
-property="og:type"
-content="website"
-/>
-
-<meta
-name="twitter:card"
-content="summary_large_image"
-/>
-
-
+<meta property="og:title" content="conido株式会社"/>
+<meta property="og:description" content="人口変動に左右されない、持続可能なインフラを。"/>
+<meta property="og:image" content="/images/ogp.png"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
 
 <style>
 
 *{
-box-sizing:border-box;
+  box-sizing:border-box;
 }
 
 body{
-margin:0;
-font-family:-apple-system,BlinkMacSystemFont,sans-serif;
-color:#111;
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+  color:#111;
+  overflow-x:hidden;
 }
 
+/* ★修正: グローバルにリンク色を黒に（メインページと統一） */
+a{
+  color:#111;
+  text-decoration:none;
+}
+
+/* ===== HEADER ===== */
 header{
-
-position:fixed;
-
-top:0;
-
-width:100%;
-
-background:
-rgba(255,255,255,.92);
-
-backdrop-filter:
-blur(16px);
-
-z-index:100;
-
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(16px);
+  z-index:100;
+  border-bottom:1px solid rgba(0,0,0,.05);
 }
 
 .nav{
-
-max-width:1400px;
-
-margin:auto;
-
-padding:28px 72px;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
+  max-width:1400px;
+  margin:auto;
+  padding:20px 72px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 .logo{
-
-text-decoration:none;
-
-color:#111;
-
-font-size:42px;
-
-font-weight:900;
-
+  text-decoration:none;
+  color:#111;
+  font-size:28px;
+  font-weight:900;
+  flex-shrink:0;
 }
 
 nav{
-
-display:flex;
-
-gap:44px;
-
+  display:flex;
+  gap:44px;
+  align-items:center;
 }
 
 nav a{
-
-text-decoration:none;
-
+  font-size:15px;
 }
 
+/* ===== ボタン ===== */
 .contact{
-
-padding:14px 24px;
-
-background:#0f766e;
-
-color:white;
-
-border-radius:14px;
-
+  display:inline-block;
+  padding:14px 24px;
+  background:#0f766e;
+  color:white !important;
+  border-radius:14px;
+  font-weight:700;
+  text-decoration:none;
+  white-space:nowrap;
 }
 
+/* ===== HERO ===== */
 .hero{
-
-padding:
-220px
-72px
-120px;
-
-background:
-
-linear-gradient(
-180deg,
-rgba(248,251,251,1),
-white
-);
-
+  padding:200px 72px 120px;
+  background:linear-gradient(180deg,#f8fbfb,white);
 }
 
 .container{
-
-max-width:1200px;
-
-margin:auto;
-
+  max-width:1200px;
+  margin:auto;
 }
 
 .label{
-
-color:#0f766e;
-
-font-weight:700;
-
+  color:#0f766e;
+  font-weight:700;
 }
 
 h1{
-
-font-size:
-clamp(
-52px,
-6vw,
-78px
-);
-
-line-height:1.1;
-
-margin-bottom:36px;
-
+  font-size:clamp(52px,6vw,78px);
+  line-height:1.1;
+  margin-bottom:36px;
 }
 
 .lead{
-
-font-size:22px;
-
-line-height:1.9;
-
-max-width:760px;
-
+  font-size:clamp(17px,2vw,22px);
+  line-height:1.9;
+  max-width:760px;
 }
 
 .hero-image{
-
-margin-top:80px;
-
-border-radius:32px;
-
-overflow:hidden;
-
+  margin-top:80px;
+  border-radius:32px;
+  overflow:hidden;
 }
 
 .hero-image img{
-
-width:100%;
-
-height:560px;
-
-object-fit:cover;
-
-display:block;
-
+  width:100%;
+  height:560px;
+  object-fit:cover;
+  display:block;
 }
 
+/* ===== SECTION ===== */
 .section{
-
-padding:140px 72px;
-
+  padding:140px 72px;
 }
 
 .grid{
-
-display:grid;
-
-grid-template-columns:
-
-1fr
-1fr;
-
-gap:48px;
-
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:48px;
 }
 
 .box{
-
-background:#f8fbfb;
-
-padding:44px;
-
-border-radius:28px;
-
+  background:#f8fbfb;
+  padding:44px;
+  border-radius:28px;
 }
 
 .box h3{
-
-margin-top:0;
-
-font-size:28px;
-
+  margin-top:0;
+  font-size:28px;
 }
 
 .box p{
-
-line-height:2;
-
+  line-height:2;
 }
 
+/* ===== CTA ===== */
 .cta{
-
-text-align:center;
-
-padding:120px;
-
+  text-align:center;
+  padding:120px;
 }
 
 .button{
-
-display:inline-block;
-
-padding:22px 44px;
-
-background:#0f766e;
-
-color:white;
-
-text-decoration:none;
-
-border-radius:18px;
-
-font-weight:700;
-
+  display:inline-block;
+  padding:22px 44px;
+  background:#0f766e;
+  color:white !important;
+  text-decoration:none;
+  border-radius:18px;
+  font-weight:700;
 }
 
+/* ===== MOBILE ===== */
 @media(max-width:900px){
 
-.hero{
+  /* ★ヘッダー: 横並び維持 */
+  .nav{
+    padding:14px 20px;
+    flex-direction:row;
+    gap:0;
+  }
 
-padding:180px 28px 100px;
+  .logo{
+    font-size:22px;
+  }
 
+  nav{
+    gap:14px;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+  }
+
+  nav a{
+    font-size:13px;
+  }
+
+  .contact{
+    padding:10px 14px;
+    font-size:13px;
+    border-radius:10px;
+  }
+
+  .hero{
+    padding:120px 20px 80px;
+  }
+
+  .section{
+    padding:80px 20px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-image img{
+    height:240px;
+  }
+
+  h1{
+    font-size:clamp(36px,8vw,52px);
+  }
+
+  .cta{
+    padding:60px 20px;
+  }
 }
 
-.section{
-
-padding:100px 28px;
-
-}
-
-.grid{
-
-grid-template-columns:1fr;
-
-}
-
-.hero-image img{
-
-height:300px;
-
-}
-
-.nav{
-
-padding:20px;
-
-flex-direction:column;
-
-}
-
-nav{
-
-gap:20px;
-
-}
-
+/* ===== 極小画面: テキストリンクを隠す ===== */
+@media(max-width:480px){
+  nav a:not(.contact){
+    display:none;
+  }
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
+  <div class="nav">
 
-<div class="nav">
+    <a class="logo" href="/">conido</a>
 
-<a
-class="logo"
-href="/"
->
+    <nav>
+      <a href="/">トップ</a>
+      <a href="/vision">私たちの想い</a>
+      <a href="/products">プロダクト</a>
+      <a href="/news">ニュース</a>
 
-conido
+      <a class="contact"
+         href="https://docs.google.com/forms/d/e/1FAIpQLSfCwxhrTMIHNpyX9h5-PlJ1SnbsK03lYNtL2lojUg3hFGoSkg/viewform?usp=header"
+         target="_blank">
+        お問い合わせ
+      </a>
 
-</a>
-
-
-<nav>
-
-<a href="/">
-トップ
-</a>
-
-<a href="/vision">
-私たちの想い
-</a>
-
-<a href="/products">
-プロダクト
-</a>
-
-<a href="/news">
-ニュース
-</a>
-
-<a
-class="contact"
-
-href="https://docs.google.com/forms/d/e/1FAIpQLSfCwxhrTMIHNpyX9h5-PlJ1SnbsK03lYNtL2lojUg3hFGoSkg/viewform?usp=header"
-
-target="_blank"
->
-
-お問い合わせ
-
-</a>
-
-</nav>
-
-</div>
-
+    </nav>
+  </div>
 </header>
 
 <section class="hero">
+  <div class="container">
 
-<div class="container">
+    <div class="label">Product 01</div>
 
-<div class="label">
+    <h1>浄化槽管理DX</h1>
 
-Product 01
+    <div class="lead">
+      現場起点で浄化槽管理をアップデートする。<br>
+      資格・知見・デジタルを接続し、<br>
+      管理業務の効率化と継続可能性を探究します。
+    </div>
 
-</div>
+    <div class="hero-image">
+      <img src="/images/sensor.png"/>
+    </div>
 
-<h1>
-
-浄化槽管理DX
-
-</h1>
-
-<div class="lead">
-
-現場起点で浄化槽管理をアップデートする。 <br> 
-資格・知見・デジタルを接続し、<br> 
-管理業務の効率化と継続可能性を探究します。
-
-</div>
-
-<div class="hero-image">
-
-<img
-src="/images/sensor.png"
-/>
-
-</div>
-
-</div>
-
+  </div>
 </section>
 
 <section class="section">
+  <div class="container">
 
-<div class="container">
+    <div class="grid">
 
-<div class="grid">
+      <div class="box">
+        <h3>機能</h3>
+        <p>
+          従来型の管理体制に加えて、センサと連動するwebアプリによって、
+          点検巡回の優先度づけを可能にします。
+        </p>
+      </div>
 
-<div class="box">
+      <div class="box">
+        <h3>取り組み</h3>
+        <p>
+          浄化槽管理士資格に基づく知見とWebアプリ開発を組み合わせ、
+          新しい保守運用の形を検討しています。
+        </p>
+      </div>
 
-<h3>
+    </div>
 
-機能
-
-</h3>
-
-<p>
-
-従来型の管理体制に加えて、センサと連動するwebアプリによって、点検巡回の優先度づけけを可能にします。
-
-</p>
-
-</div>
-
-<div class="box">
-
-<h3>
-
-取り組み
-
-</h3>
-
-<p>
-
-浄化槽管理士資格に基づく知見と、
-Webアプリ開発を組み合わせ、
-新しい保守運用の形を検討しています。
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
+  </div>
 </section>
 
 <div class="cta">
-
-<a
-class="button"
-
-href="https://docs.google.com/forms/d/e/1FAIpQLSfCwxhrTMIHNpyX9h5-PlJ1SnbsK03lYNtL2lojUg3hFGoSkg/viewform?usp=header"
-
-target="_blank"
->
-
-お問い合わせ
-
-</a>
-
+  <a class="button"
+     href="https://docs.google.com/forms/d/e/1FAIpQLSfCwxhrTMIHNpyX9h5-PlJ1SnbsK03lYNtL2lojUg3hFGoSkg/viewform?usp=header"
+     target="_blank">
+    お問い合わせ
+  </a>
 </div>
 
 </body>
-
 </html>
-
